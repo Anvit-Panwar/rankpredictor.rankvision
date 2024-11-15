@@ -1,0 +1,414 @@
+/* General Styles */
+* {
+    box-sizing: border-box; /* Includes padding and border in the element's width and height */
+}
+
+html, body {
+    width: 100%; /* Ensures the body doesn't exceed the viewport width */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+}
+
+/* Remove blue background on button click */
+button,
+a,* {
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent; /* For mobile browsers */
+}
+
+/* Optionally, for more accessibility-friendly customization */
+button:focus,
+a,*:focus {
+    outline: none; /* Remove default outline */
+    background: none; /* Remove default background */
+}
+
+.navbar {
+    width: 100%;
+    max-width: 100%; /* Ensures the navbar doesn't exceed the viewport width */
+    background-color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+}
+
+.navbar-brand span {
+    cursor: default;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-links a {
+    margin-left: 20px;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 12px; /* Consistent padding */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.navbar-links a:hover {
+    border-radius: 500px;
+    background-color: #5ea2f526;
+}
+
+.image {
+    width: 12px;
+}
+
+h2 {
+    background-color: #7a57b3; /* Medium purple */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    max-width: 500px; /* Ensures the h2 element doesn't exceed the viewport width */
+    width: 100%;
+}
+
+/* Container for the Form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 100%; /* Ensures the container doesn't exceed the viewport width */
+}
+
+/* Form Card */
+.form-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Align radio buttons and labels */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0px;
+    accent-color: #7a57b3; /* Style radio button color to match theme */
+    margin-top: 6px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-right: 160px;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.neet-btn {
+    background-color: #7a57b3;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.neet-btn:hover {
+    background-color: #5c3c92; /* Darker purple on hover */
+}
+
+.neet-btn:active {
+    transform: scale(1.05);
+}
+
+/* Terms and Conditions Text */
+.terms {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.terms a {
+    color: #7a57b3;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    position: absolute;
+    bottom: 0px;
+    cursor: default;
+}
+
+.bottom {
+    display: flex;
+    gap: 20px;
+    color: #6c757d;
+    margin-top: 12px;
+}
+
+/* Fix for margin-left causing overflow */
+body, .bottom {
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+.bottom a {
+    color: #457b9d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for Divider */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+
+/* Pop-up message styles */
+.popup-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 50px;
+    background-color: #e7f1ff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.popup-container.active {
+    display: block; /* Show pop-up when active */
+}
+
+.popup-container p {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.popup-container .close-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-container .close-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Cross button for Windows 11 close button style */
+.popup-container .close-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 20px;
+    background: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.popup-container .close-icon:hover {
+    background-color: #f44; /* Darker red on hover */
+    color: white;
+}
+
+
+
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .navbar-brand span {
+        font-size: 20px;
+    }
+
+    .navbar-brand img {
+        margin-right: 1px;
+    }
+
+    /* Hide text in nav links and center icons horizontally */
+    .navbar-links {
+        display: flex;
+        gap: 0px;
+        /* Adjust gap to reduce space between icons */
+    }
+
+    .navbar-links a {
+        font-size: 0;
+        /* Hide text */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        transition: background-color 0.1s, scale 0.2s;
+    }
+
+    .navbar-links a:active {
+        scale: 1.2;
+        background-color: #5ea2f526;
+    }
+
+    .navbar-links .image {
+        width: 20px;
+        /* Adjust icon size for visibility */
+        height: 20px;
+        margin: 0;
+        /* Remove margin to reduce space */
+    }
+
+    h2{
+        margin-top: 50px;
+        width: 80vw;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .bottom {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .bottom a {
+        margin: 9px 0;
+    }
+
+    footer {
+        margin-top: 70px;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        bottom: auto;
+        /* Ensure it's not fixed at the bottom */
+    }
+
+    footer p {
+        margin: 1px;
+    }
+
+    #resultPopup{
+        width: 90vw;
+        padding: 15px;
+    }
+
+    #resultMessage{
+        font-size: medium;
+    }
+
+    #closePopupBtn{
+        transition: all 0s;
+    }
+
+    #closePopupBtn:active {
+        background-color: #ff4d4d; /* Change color on hover */
+        color: white;
+    }
+}

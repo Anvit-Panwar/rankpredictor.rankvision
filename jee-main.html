@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Main Rank Predictor - Rank Vision</title>
+    <meta name="description" content="Estimate your JEE Main rank with Rank Vision's predictor tool based on your score and category. Find your college chances and rank today!">
+    <meta name="keywords" content="JEE Main Rank Predictor, College Predictor, Rank Vision, JEE Main Score Prediction, Rank Estimation">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-.png">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="JEE Main Rank Predictor - Rank Vision">
+    <meta property="og:description" content="Predict your JEE Main rank and college chances with Rank Vision's advanced tool. Input your score and category for an instant estimate.">
+    <meta property="og:image" content="logo-.png">
+    <meta property="og:url" content="https://www.rankvision.com/jee-main.html">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "Rank Vision",
+          "url": "https://www.rankvision.com",
+          "logo": "logo-.png",
+          "description": "Rank Vision's JEE Main Rank Predictor tool helps students predict their potential rank and college chances based on score and category.",
+          "serviceType": "Rank Prediction Service",
+          "subjectOf": {
+            "@type": "Thing",
+            "name": "JEE Main Rank and college Prediction"
+          }
+        }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="logo-.png" alt="Rank Vision Logo" class="logo">
+            <span>Rank Vision</span>
+        </div>
+        <div class="navbar-links">
+            <a href="index.html"><img src="home.png" alt="Home Icon" class="image"> Home</a>
+            <a href="contact.html"><img src="contact.png" alt="Contact Icon" class="image"> Contact</a>
+            <a href="feedback.html"><img src="feedback.png" alt="Feedback Icon" class="image"> Feedback</a>
+        </div>
+    </nav>
+
+    <!-- Main Heading and Form Section -->
+    <main>
+        <h2>JEE Main Rank & College Predictor</h2>
+
+        <div class="container">
+            <div class="form-card main-card">
+                <form id="predictorForm">
+                    <div class="form-group first">
+                        <label for="score">Enter Score out of 300</label>
+                        <input type="number" id="score" placeholder="Enter your score" required>
+                    </div>
+                    <hr>
+
+                    <h3>Enter Details</h3>
+
+                    <div class="form-group">
+                        <label for="category">Select Category</label>
+                        <select id="category" required>
+                            <option value="" disabled>Choose category</option>
+                            <option value="general" selected>General</option>
+                            <option value="obc">OBC</option>
+                            <option value="sc">SC</option>
+                            <option value="st">ST</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Female Quota</label>
+                        <div class="radio-group">
+                            <input type="radio" id="femaleYes" name="femaleQuota" value="yes" class="dot">
+                            <label for="femaleYes">Yes</label>
+                            <input type="radio" id="femaleNo" name="femaleQuota" value="no" checked class="dot">
+                            <label for="femaleNo">No</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn main-btn">Predict My Rank</button>
+                    <p class="terms">By continuing, you agree to our <a href="terms.html">Terms & Conditions</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Result Popup Section -->
+        <div class="popup-container" id="resultPopup">
+            <button class="close-icon" onclick="closePopup()">✕</button>
+            <p id="resultMessage"></p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Rank Vision. All rights reserved.</p>
+        <p>Developer: Anvit Panwar</p>
+        <div class="bottom">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="jee-mains.js"></script>
+</body>
+</html>
+

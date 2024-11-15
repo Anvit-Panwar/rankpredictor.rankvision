@@ -1,0 +1,159 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #000; /* Black background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Remove blue background on button click */
+button,
+a,* {
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent; /* For mobile browsers */
+}
+
+/* Optionally, for more accessibility-friendly customization */
+button:focus,
+a,*:focus {
+    outline: none; /* Remove default outline */
+    background: none; /* Remove default background */
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-links a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #444;
+    border-radius: 50px;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle shadow effect */
+}
+
+.main-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main-content a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    padding: 15px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Hover Effects for Links */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1e90ff; /* Dodger Blue */
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        padding: 10px;
+        justify-content: center;
+        gap: 120px;
+    }
+
+    .navbar-brand span {
+        font-size: 20px;
+    }
+
+    /* Hide text in nav links and center icons horizontally */
+    .navbar-links {
+        display: flex;
+        gap: 0px;
+        /* Adjust gap to reduce space between icons */
+    }
+
+    .navbar-links a {
+        /* Hide text */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        width: 90px;
+        height: 40px;
+        margin: 0;
+        transition: background-color 0.1s, scale 0.2s;
+    }
+
+    .navbar-links a:active {
+        scale: 1.2;
+        background-color: #444;
+    }
+
+    .navbar-links :nth-child(2){
+        display: none;
+    }
+
+    .navbar-links :nth-child(3){
+        display: none;
+    }
+
+}
