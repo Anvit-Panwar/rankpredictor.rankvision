@@ -349,8 +349,9 @@ footer {
     }
 
     h2{
-        margin-top: 50px;
         width: 80vw;
+        margin: auto;
+        margin-top: 50px;
     }
 
     .form-card {
