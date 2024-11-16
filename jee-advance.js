@@ -91,6 +91,12 @@ document.getElementById('predictorForm').addEventListener('submit', function (ev
     const categoryData = rankData[category];
     const cutoffStatus = score >= categoryData.cutoff ? "Passed" : "Failed";
 
+    // Handle scores greater than 360
+    if (score > 360) {
+        showPopup(`Score is above the defined range. Unable to predict a rank.`);
+        return;
+    }
+
     // Find prediction data using `find()`
     const prediction = categoryData.ranks.find(entry =>
         score >= entry.range[0] && score <= entry.range[1]
