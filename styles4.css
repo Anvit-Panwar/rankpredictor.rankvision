@@ -74,7 +74,7 @@ a,*:focus {
     width: 12px;
 }
 
-h2 {
+h1 {
     background-color: #7a57b3; /* Medium purple */
     color: #ffffff;
     padding: 15px;
@@ -349,7 +349,7 @@ hr {
         /* Remove margin to reduce space */
     }
 
-    h2{
+    h1{
         margin-top: 50px;
         width: 80vw;
     }
