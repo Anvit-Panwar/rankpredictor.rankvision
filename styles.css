@@ -231,7 +231,7 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #555;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     cursor: default;
 }
