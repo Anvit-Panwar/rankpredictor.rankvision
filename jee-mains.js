@@ -23,7 +23,7 @@ document.getElementById('predictorForm').addEventListener('submit', function(eve
             { range: [260, 269], rankRange: "501-1000", colleges: ["NIT Jalandhar", "IIIT Guwahati"] },
             { range: [250, 259], rankRange: "1001-2000", colleges: ["NITs, IIITs"] },
             { range: [240, 249], rankRange: "2001-3000", colleges: ["Newer NITs, IIITs"] },
-            { range: [230, 239], rankRange: "3001-5000", colleges: ["Select IIITs"] },
+            { range: [230, 239], rankRange: "3001-5000", colleges: ["Selected IIITs"] },
             { range: [220, 229], rankRange: "5001-7000", colleges: ["Few NITs"] },
             { range: [210, 219], rankRange: "7001-10000", colleges: ["New NITs"] },
             { range: [0, 209], rankRange: "10000+", colleges: ["Based on cutoff"] }
@@ -59,7 +59,7 @@ document.getElementById('predictorForm').addEventListener('submit', function(eve
 
     // Define cutoff scores for each category
     const cutoffScores = {
-        general: 85,
+        general: 90,
         obc: 70,
         sc: 50,
         st: 40
@@ -115,4 +115,5 @@ document.getElementById('predictorForm').addEventListener('submit', function(eve
 function closePopup() {
     document.getElementById('resultPopup').classList.remove('active');
 }
+
 
